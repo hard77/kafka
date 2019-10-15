@@ -19,8 +19,21 @@ RUN chmod 775 entrypoint.sh
 RUN chmod 775 run.sh
 RUN chmod 775 setup.sh
 RUN /postunpack.sh
-ENV BITNAMI_APP_NAME="kafka" \
-    BITNAMI_IMAGE_VERSION="2.3.0-ol-7-r118" \
+ENV ALLOW_PLAINTEXT_LISTENER="no" \
+    BITNAMI_APP_NAME="kafka" \
+    BITNAMI_IMAGE_VERSION="1.1.1-debian-9-r306" \
+    KAFKA_BROKER_PASSWORD="bitnami" \
+    KAFKA_BROKER_USER="user" \
+    KAFKA_CERTIFICATE_PASSWORD="" \
+    KAFKA_CFG_ADVERTISED_LISTENERS="PLAINTEXT://:9092" \
+    KAFKA_CFG_LISTENERS="PLAINTEXT://:9092" \
+    KAFKA_CFG_ZOOKEEPER_CONNECT="localhost:2181" \
+    KAFKA_HEAP_OPTS="-Xmx1024m -Xms1024m" \
+    KAFKA_INTER_BROKER_PASSWORD="bitnami" \
+    KAFKA_INTER_BROKER_USER="admin" \
+    KAFKA_PORT_NUMBER="9092" \
+    KAFKA_ZOOKEEPER_PASSWORD="" \
+    KAFKA_ZOOKEEPER_USER="" \
     NAMI_PREFIX="/.nami" \
     PATH="/opt/bitnami/java/bin:/opt/bitnami/kafka/bin:$PATH"
 
