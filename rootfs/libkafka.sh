@@ -312,7 +312,7 @@ kafka_configure_sasl_plaintext_listener() {
     kafka_server_conf_set sasl.enabled.mechanisms PLAIN
     kafka_server_conf_set security.inter.broker.protocol SASL_PLAINTEXT
     # Set producer/consumer configuration
-    kafka_producer_consumer_conf_set security.protocol SASL_SSL
+    kafka_producer_consumer_conf_set security.protocol SASL_PLAINTEXT
     kafka_producer_consumer_conf_set sasl.mechanism PLAIN
 }
 
