@@ -16,6 +16,7 @@ RUN ls -lrth
 COPY rootfs /
 RUN chmod 775 postunpack.sh
 RUN chmod 775 entrypoint.sh
+RUn chmod 775 run.sh
 RUN /postunpack.sh
 ENV BITNAMI_APP_NAME="kafka" \
     BITNAMI_IMAGE_VERSION="2.3.0-ol-7-r118" \
