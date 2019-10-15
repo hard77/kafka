@@ -19,7 +19,7 @@ RUN chmod 775 entrypoint.sh
 RUN chmod 775 run.sh
 RUN chmod 775 setup.sh
 RUN /postunpack.sh
-ENV ALLOW_PLAINTEXT_LISTENER="no" \
+ENV ALLOW_PLAINTEXT_LISTENER="yes" \
     BITNAMI_APP_NAME="kafka" \
     BITNAMI_IMAGE_VERSION="1.1.1-debian-9-r306" \
     KAFKA_BROKER_PASSWORD="bitnami" \
