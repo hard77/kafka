@@ -293,6 +293,7 @@ kafka_configure_sasl_ssl_listener() {
     kafka_producer_consumer_conf_set ssl.key.password "$KAFKA_CERTIFICATE_PASSWORD"
     kafka_producer_consumer_conf_set security.protocol SASL_PLAINTEXT
     kafka_producer_consumer_conf_set sasl.mechanism PLAIN
+    kafka_producer_consumer_conf_set group.id asira
 }
 
 ########################
@@ -314,6 +315,7 @@ kafka_configure_sasl_plaintext_listener() {
     # Set producer/consumer configuration
     kafka_producer_consumer_conf_set security.protocol SASL_PLAINTEXT
     kafka_producer_consumer_conf_set sasl.mechanism PLAIN
+    kafka_producer_consumer_conf_set group.id asira
 }
 
 ########################
